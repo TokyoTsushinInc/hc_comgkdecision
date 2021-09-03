@@ -1,0 +1,390 @@
+fileFormatVersion: 2
+guid: 2a609dda415b6a2418bed6d577f9db81
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      74: 1827226128182048838
+    second: Take 001
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: jfk_0001_0002_trump_mat
+    second: {fileID: 2100000, guid: 782f3a3e05c43b34b8be1e7a69fdc2f2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: trump_mat
+    second: {fileID: 2100000, guid: 782f3a3e05c43b34b8be1e7a69fdc2f2, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: chara_jfk(Clone)
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jfk_0001_0002:trump_geo
+      parentName: chara_jfk(Clone)
+      position: {x: -0.003995514, y: 0.8594598, z: -0.022750815}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jfk_0001_0002:face_nomal
+      parentName: jfk_0001_0002:trump_geo
+      position: {x: 0.003995514, y: -0.8594598, z: 0.022750815}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jfk_0001_0002:face_smile
+      parentName: jfk_0001_0002:trump_geo
+      position: {x: -0, y: -0.010065822, z: 0.027628364}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jfk_0001_0002:face_cry
+      parentName: jfk_0001_0002:trump_geo
+      position: {x: -0, y: -0.010065822, z: 0.027628364}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jfk_0001_0002:root
+      parentName: chara_jfk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jfk_0001_0002:pelvis
+      parentName: jfk_0001_0002:root
+      position: {x: -0, y: 0.60249597, z: -0.016670998}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jfk_0001_0002:thigh_l
+      parentName: jfk_0001_0002:pelvis
+      position: {x: -0.09137464, y: -0.037891578, z: 0.0031041396}
+      rotation: {x: -0.0000016991979, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jfk_0001_0002:calf_l
+      parentName: jfk_0001_0002:thigh_l
+      position: {x: 3.5527136e-17, y: -0.24906753, z: 0.0022670196}
+      rotation: {x: 0.0000036717565, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jfk_0001_0002:foot_l
+      parentName: jfk_0001_0002:calf_l
+      position: {x: 0.0013746452, y: -0.20810474, z: -0.010873655}
+      rotation: {x: -0.0000019725585, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jfk_0001_0002:ball_l
+      parentName: jfk_0001_0002:foot_l
+      position: {x: -0.000000085830685, y: -0.057123, z: 0.08833938}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jfk_0001_0002:thigh_r
+      parentName: jfk_0001_0002:pelvis
+      position: {x: 0.09137, y: -0.037891578, z: 0.0031041396}
+      rotation: {x: -0.00000086403463, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jfk_0001_0002:calf_r
+      parentName: jfk_0001_0002:thigh_r
+      position: {x: 0.000004644394, y: -0.24906753, z: 0.002267003}
+      rotation: {x: 0.0000017539137, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jfk_0001_0002:foot_r
+      parentName: jfk_0001_0002:calf_r
+      position: {x: -0.0013746452, y: -0.20810471, z: -0.010873671}
+      rotation: {x: -0.00000088987906, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jfk_0001_0002:ball_r
+      parentName: jfk_0001_0002:foot_r
+      position: {x: 0.000000085830685, y: -0.057123, z: 0.08833938}
+      rotation: {x: -0, y: -0.000041891268, z: 3.469447e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jfk_0001_0002:spine_01
+      parentName: jfk_0001_0002:pelvis
+      position: {x: 8.8817837e-17, y: 0.06214401, z: 0.0056363284}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jfk_0001_0002:spine_02
+      parentName: jfk_0001_0002:spine_01
+      position: {x: 3.6711017e-17, y: 0.13236327, z: -0.0004894364}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jfk_0001_0002:spine_03
+      parentName: jfk_0001_0002:spine_02
+      position: {x: 3.673819e-17, y: 0.13236327, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jfk_0001_0002:clavicle_l
+      parentName: jfk_0001_0002:spine_03
+      position: {x: -0.06716192, y: 0.06969223, z: -0.011518539}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jfk_0001_0002:upperarm_l
+      parentName: jfk_0001_0002:clavicle_l
+      position: {x: -0.14116913, y: 1.4210854e-16, z: -0.038719106}
+      rotation: {x: -0, y: -0, z: 0.000006416546, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jfk_0001_0002:lowerarm_l
+      parentName: jfk_0001_0002:upperarm_l
+      position: {x: -0.21126485, y: 0.0000027111812, z: -0.012352371}
+      rotation: {x: -0, y: -0.004190891, z: -0.000012832979, w: 0.99999124}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jfk_0001_0002:hand_l
+      parentName: jfk_0001_0002:lowerarm_l
+      position: {x: -0.19916415, y: -0.000002555892, z: 0.018193368}
+      rotation: {x: -0, y: -0, z: 0.000006416546, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jfk_0001_0002:thumb_01_l
+      parentName: jfk_0001_0002:hand_l
+      position: {x: -0.039355315, y: -0.039158247, z: 0.09467684}
+      rotation: {x: -0.16600592, y: 0.30955184, z: 0.14336984, w: 0.9252377}
+      scale: {x: 0.9999998, y: 0.9999999, z: 1}
+    - name: jfk_0001_0002:thumb_02_l
+      parentName: jfk_0001_0002:thumb_01_l
+      position: {x: -0.057733223, y: -0.0034708728, z: 0.004873848}
+      rotation: {x: -0.0028482527, y: 0.043666422, z: -0.002641987, w: 0.99903864}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jfk_0001_0002:thumb_03_l
+      parentName: jfk_0001_0002:thumb_02_l
+      position: {x: -0.08112826, y: -0.0056975354, z: -0.006705573}
+      rotation: {x: -0.000000018626453, y: -0.00000008940693, z: -0.0000026095656, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 1}
+    - name: jfk_0001_0002:index_01_l
+      parentName: jfk_0001_0002:hand_l
+      position: {x: -0.14154992, y: -0.014273682, z: 0.081582144}
+      rotation: {x: 0.025599224, y: 0.054559022, z: 0.06412078, w: 0.99612075}
+      scale: {x: 1.0000001, y: 1, z: 0.99999994}
+    - name: jfk_0001_0002:index_02_l
+      parentName: jfk_0001_0002:index_01_l
+      position: {x: -0.056953195, y: -0.00000018847135, z: 0.0014719932}
+      rotation: {x: -0.0019946934, y: 0.013203433, z: -0.046045, w: 0.9988501}
+      scale: {x: 1.0000001, y: 0.9999999, z: 0.99999994}
+    - name: jfk_0001_0002:index_03_l
+      parentName: jfk_0001_0002:index_02_l
+      position: {x: -0.070468575, y: -0.011148501, z: -0.003137901}
+      rotation: {x: -0.000000055997194, y: 0.017452404, z: 0.0000026666105, w: 0.99984777}
+      scale: {x: 0.99999976, y: 1.0000001, z: 1}
+    - name: jfk_0001_0002:middle_01_l
+      parentName: jfk_0001_0002:hand_l
+      position: {x: -0.16057205, y: -0.008850021, z: -0.000066070555}
+      rotation: {x: 0.0000051541006, y: -0.00004740994, z: 0.10942537, w: 0.9939951}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jfk_0001_0002:middle_02_l
+      parentName: jfk_0001_0002:middle_01_l
+      position: {x: -0.05954347, y: -0.000000013616931, z: 0.0000030231474}
+      rotation: {x: -0.00000018528677, y: -0.004599832, z: -0.00230374, w: 0.99998677}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: jfk_0001_0002:middle_03_l
+      parentName: jfk_0001_0002:middle_02_l
+      position: {x: -0.067283675, y: -0.0028212906, z: 0.0056025716}
+      rotation: {x: -4.5474735e-13, y: 0.000031095955, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jfk_0001_0002:ring_01_l
+      parentName: jfk_0001_0002:hand_l
+      position: {x: -0.1487941, y: -0.029735869, z: -0.07410651}
+      rotation: {x: -0.012390605, y: -0.052159782, z: 0.089180134, w: 0.9945717}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: jfk_0001_0002:ring_02_l
+      parentName: jfk_0001_0002:ring_01_l
+      position: {x: -0.052562468, y: 0.00000043687112, z: 0.0000000018868347}
+      rotation: {x: -0.00000028777862, y: -0.019007506, z: -0.042072006, w: 0.99893385}
+      scale: {x: 1, y: 1.0000001, z: 0.99999994}
+    - name: jfk_0001_0002:ring_03_l
+      parentName: jfk_0001_0002:ring_02_l
+      position: {x: -0.055424884, y: -0.008725671, z: 0.0039420617}
+      rotation: {x: 0.0000000027939675, y: 0.00000002235174, z: -0.000006646499, w: 1}
+      scale: {x: 1.0000001, y: 0.9999999, z: 0.9999998}
+    - name: jfk_0001_0002:clavicle_r
+      parentName: jfk_0001_0002:spine_03
+      position: {x: 0.06716192, y: 0.06969223, z: -0.011518539}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jfk_0001_0002:upperarm_r
+      parentName: jfk_0001_0002:clavicle_r
+      position: {x: 0.14116913, y: 1.4210854e-16, z: -0.038719106}
+      rotation: {x: -0, y: -0, z: -0.000020231517, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jfk_0001_0002:lowerarm_r
+      parentName: jfk_0001_0002:upperarm_r
+      position: {x: 0.21126485, y: 0.000008548416, z: -0.012352371}
+      rotation: {x: -0, y: 0.004190891, z: 0.00004046268, w: 0.99999124}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jfk_0001_0002:hand_r
+      parentName: jfk_0001_0002:lowerarm_r
+      position: {x: 0.19916415, y: -0.000008058786, z: 0.018193368}
+      rotation: {x: -0, y: -0, z: -0.000020231517, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jfk_0001_0002:thumb_01_r
+      parentName: jfk_0001_0002:hand_r
+      position: {x: 0.039355315, y: -0.039158247, z: 0.09467684}
+      rotation: {x: -0.19378994, y: -0.2680118, z: -0.15829006, w: 0.9303544}
+      scale: {x: 1, y: 1.0000002, z: 1.0000002}
+    - name: jfk_0001_0002:thumb_02_r
+      parentName: jfk_0001_0002:thumb_01_r
+      position: {x: 0.057076685, y: -0.004351294, z: 0.009604609}
+      rotation: {x: -0.00025846064, y: -0.016106114, z: -0.0057608634, w: 0.99985373}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jfk_0001_0002:thumb_03_r
+      parentName: jfk_0001_0002:thumb_02_r
+      position: {x: 0.06785629, y: -0.0024842648, z: 0.0039011615}
+      rotation: {x: 0.000000007450581, y: -5.551115e-17, z: -0.000005297363, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: jfk_0001_0002:index_01_r
+      parentName: jfk_0001_0002:hand_r
+      position: {x: 0.14154992, y: -0.014273682, z: 0.081582144}
+      rotation: {x: 0.02645138, y: -0.078939065, z: -0.069483325, w: 0.99410313}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: jfk_0001_0002:index_02_r
+      parentName: jfk_0001_0002:index_01_r
+      position: {x: 0.0569532, y: -0.000000030109884, z: -0.0014735106}
+      rotation: {x: 0.0027787292, y: -0.009021132, z: 0.06410336, w: 0.99789864}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1}
+    - name: jfk_0001_0002:index_03_r
+      parentName: jfk_0001_0002:index_02_r
+      position: {x: 0.06303078, y: -0.013090882, z: -0.0021190967}
+      rotation: {x: -0.000000009219197, y: 0.01745303, z: 0.000000040809564, w: 0.99984777}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: jfk_0001_0002:middle_01_r
+      parentName: jfk_0001_0002:hand_r
+      position: {x: 0.16057205, y: -0.008850021, z: -0.000066070555}
+      rotation: {x: 0.00023733948, y: -0.0030040324, z: -0.10865478, w: 0.99407506}
+      scale: {x: 0.9999999, y: 0.9999999, z: 1}
+    - name: jfk_0001_0002:middle_02_r
+      parentName: jfk_0001_0002:middle_01_r
+      position: {x: 0.05954347, y: -0.000000013616931, z: -0.0016959858}
+      rotation: {x: 0.0010095788, y: 0.022989584, z: 0.021964572, w: 0.9994939}
+      scale: {x: 1.0000002, y: 1, z: 1}
+    - name: jfk_0001_0002:middle_03_r
+      parentName: jfk_0001_0002:middle_02_r
+      position: {x: 0.05978397, y: -0.0048894417, z: 0.0052140756}
+      rotation: {x: -0.0000000023283067, y: 0.017452978, z: -0, w: 0.9998477}
+      scale: {x: 0.9999998, y: 1, z: 1}
+    - name: jfk_0001_0002:ring_01_r
+      parentName: jfk_0001_0002:hand_r
+      position: {x: 0.1487941, y: -0.029735869, z: -0.07410651}
+      rotation: {x: -0.015948808, y: 0.03336075, z: -0.09294514, w: 0.9949843}
+      scale: {x: 1, y: 1, z: 0.9999999}
+    - name: jfk_0001_0002:ring_02_r
+      parentName: jfk_0001_0002:ring_01_r
+      position: {x: 0.052562494, y: -0.0000006672813, z: -0.0010628771}
+      rotation: {x: 0.000156112, y: -0.0077862805, z: 0.004151743, w: 0.9999611}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: jfk_0001_0002:ring_03_r
+      parentName: jfk_0001_0002:ring_02_r
+      position: {x: 0.04848016, y: -0.0019715198, z: 0.0019272706}
+      rotation: {x: 0.00000018913772, y: 0.017452948, z: -0.0000107954265, w: 0.99984777}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: jfk_0001_0002:neck_01
+      parentName: jfk_0001_0002:spine_03
+      position: {x: -6.9475985e-17, y: 0.13236327, z: -0.0077153253}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jfk_0001_0002:head
+      parentName: jfk_0001_0002:neck_01
+      position: {x: -0.000000030877295, y: 0.09639992, z: 0.019030463}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jfk_0001_0002:hair_root
+      parentName: jfk_0001_0002:head
+      position: {x: -0, y: 0.17266794, z: -0.0019957512}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jfk_0001_0002:pupil_right
+      parentName: jfk_0001_0002:head
+      position: {x: 0.0830713, y: 0.26978117, z: 0.117578655}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jfk_0001_0002:pupil_left
+      parentName: jfk_0001_0002:head
+      position: {x: -0.08134409, y: 0.26978117, z: 0.117578655}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
