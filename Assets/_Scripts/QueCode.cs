@@ -96,5 +96,35 @@ public class QueCode : MonoBehaviour{
 		}
 		
 	}
+	
+	////////////////////////////////////////////////////////
+	// キュー(座標移動)
+	////////////////////////////////////////////////////////
+	public void queMove(string str){
+		
+		// 入力形式(インデックスとアニメーションファイル名)
+		// 1,anim_move0
+		
+		// [,]でスプリット
+		string[] sprit_str = str.Split(","[0]);
+		
+		gameCode.actionQueMove(int.Parse(sprit_str[0]),sprit_str[1]);
+		
+	}
+	
+	////////////////////////////////////////////////////////
+	// キュー(エフェクト)
+	////////////////////////////////////////////////////////
+	public void queEffect(string str){
+		
+		// 入力形式(インデックスとアニメーションタイプ)
+		// 1,sweat or angry
+		
+		// [,]でスプリット
+		string[] sprit_str = str.Split(","[0]);
+		
+		gameCode.actionQueEffect(int.Parse(sprit_str[0]),sprit_str[1]);
+		
+	}
     
 }

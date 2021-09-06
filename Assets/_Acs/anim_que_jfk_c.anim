@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: anim_que_trump_b
+  m_Name: anim_que_jfk_c
   serializedVersion: 6
   m_Legacy: 1
   m_Compressed: 0
@@ -31,7 +31,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 3.5166667
+    m_StopTime: 4
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -58,128 +58,72 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.033333335
+  - time: 0.083333336
     functionName: queSetFace
-    data: 0,1,true,0,0
+    data: 0,0,true,0,0
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.46666667
-    functionName: queCharaMotionRandom
-    data: 2,THROW,THROW
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.48333332
-    functionName: queEffect
-    data: 2,angry
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.56666666
-    functionName: queCharaMotionRandom
-    data: 3,THROW,THROW
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.5833333
-    functionName: queEffect
-    data: 3,angry
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.73333335
-    functionName: queCharaMotionRandom
-    data: 4,THROW,THROW
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.75
-    functionName: queEffect
-    data: 4,angry
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.8333333
-    functionName: queCharaMotionRandom
-    data: 5,THROW,THROW
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.85
-    functionName: queEffect
-    data: 5,angry
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.9166667
-    functionName: queCharaMotionRandom
-    data: 6,THROW,THROW
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.93333334
-    functionName: queEffect
-    data: 6,angry
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 1
-    functionName: queCharaMotionRandom
-    data: 7,THROW,THROW
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 1.0166667
-    functionName: queEffect
-    data: 7,angry
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 1.9666667
-    functionName: queCharaMotionRandom
-    data: 1,GUARD,GUARD
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 2
-    functionName: queCharaMotion
-    data: 0,GUARD
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 2.0333333
+  - time: 0.16666667
     functionName: queSetFace
-    data: 0,0,true,0,100
+    data: 1,2,true,0,100
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 3.5
+  - time: 1.5
     functionName: queCharaMotion
-    data: 0,TIRE
+    data: 1,WALK
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 3.5166667
-    functionName: queEffect
-    data: 0,sweat
+  - time: 1.5833334
+    functionName: queMove
+    data: 1,anim_move1
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.6666666
+    functionName: queCharaMotion
+    data: 0,BACKWALK
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.75
+    functionName: queMove
+    data: 0,anim_move0
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.9166666
+    functionName: queSetFace
+    data: 0,1,true,0,100
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 2.8333333
+    functionName: queCharaMotion
+    data: 1,BINTA
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 3.6666667
+    functionName: queCharaMotion
+    data: 0,HIT
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 4
+    functionName: queCharaMotion
+    data: 0,DEAD
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

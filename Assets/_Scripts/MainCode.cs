@@ -8,6 +8,9 @@ public class MainCode : MonoBehaviour{
 	// デバッグ
 	public bool debug = false;
 	
+	// スプライト(アタッチしてね)
+	public Sprite[] spriteButton = new Sprite[3];
+	
 	// 外部コード参照用(アタッチしてね)
 	public GACode gaCode = null;
 	public TenjinCode tenjinCode = null;
@@ -25,6 +28,9 @@ public class MainCode : MonoBehaviour{
 	public int current_index = 0;
 	public bool setting = false;
 	public bool full = false;
+	public bool skip = false;
+	public bool colors = false;
+	public int colors_type = 0;
 	
 	
 	
@@ -54,6 +60,9 @@ public class MainCode : MonoBehaviour{
 		current_index = -1;
 		setting = false;
 		full = false;
+		skip = false;
+		colors = false;
+		colors_type = 0;
 		
 		// ステータスの更新
 		setStatus();
@@ -70,6 +79,7 @@ public class MainCode : MonoBehaviour{
 		float faw = 0.0f;
 		Vector3 vec = Vector3.zero;
 		GameObject obj = null;
+		int ran = 0;
 		
 		// ％指定用
 		fah = fixAspectFor2DCamera.getCameraorthographicSizeHeight();
@@ -84,15 +94,37 @@ public class MainCode : MonoBehaviour{
 		obj.transform.position = vec;
 		
 		// a & bボタン
+		ran = Random.Range(0,2);
+		float[] x_array = new float[2];
+		if(ran == 0){
+			x_array[0] = 1.3f;
+			x_array[1] = -1.3f;
+		}else{
+			x_array[0] = -1.3f;
+			x_array[1] = 1.3f;
+		}
+		
 		obj = GameObject.Find("UI/anim_selectA").gameObject;
 		vec = obj.transform.position;
+		vec.x = 1000 + x_array[0];
 		vec.y = 0 + fah * 70;
 		obj.transform.position = vec;
 		
 		obj = GameObject.Find("UI/anim_selectB").gameObject;
 		vec = obj.transform.position;
+		vec.x = 1000 + x_array[1];
 		vec.y = 0 + fah * 70;
 		obj.transform.position = vec;
+		
+		// ボタンカラー
+		if(colors_type == 0){
+			GameObject.Find("UI/anim_selectA/base/INPUT_BUTTON_SELECT_A").GetComponent<SpriteRenderer>().sprite = spriteButton[0];
+			GameObject.Find("UI/anim_selectB/base/INPUT_BUTTON_SELECT_B").GetComponent<SpriteRenderer>().sprite = spriteButton[0];
+		}else{
+			GameObject.Find("UI/anim_selectA/base/INPUT_BUTTON_SELECT_A").GetComponent<SpriteRenderer>().sprite = spriteButton[1];
+			GameObject.Find("UI/anim_selectB/base/INPUT_BUTTON_SELECT_B").GetComponent<SpriteRenderer>().sprite = spriteButton[2];
+		}
+		
 		
 	}
 	
@@ -357,6 +389,32 @@ public class MainCode : MonoBehaviour{
 			full = false;
 		}else{
 			full = true;
+		}
+		
+	}
+	
+	public void pushedDebugSkipButton(){
+		
+		if(skip){
+			skip = false;
+		}else{
+			skip = true;
+		}
+		
+	}
+	
+	public void pushedDebugColorsButton(){
+		
+		if(colors_type == 0){
+			colors_type = 1;
+		}else{
+			colors_type = 0;
+		}
+		
+		if(colors){
+			colors = false;
+		}else{
+			colors = true;
 		}
 		
 	}

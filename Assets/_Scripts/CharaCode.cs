@@ -10,6 +10,10 @@ public class CharaCode : MonoBehaviour{
     // スキンメッシュ
     public SkinnedMeshRenderer[] smr = new SkinnedMeshRenderer[8];
     
+    // エフェクト
+    public ParticleSystem[] effectAngry = new ParticleSystem[4];
+    public ParticleSystem effectSweat = null;
+    
     // メンバ
     public int skin = 0;
     public int shape_index = -1;
@@ -178,6 +182,31 @@ public class CharaCode : MonoBehaviour{
             }
             
         }
+        
+    }
+    
+    ////////////////////////////////////////////////////////
+    // エフェクトの再生
+    ////////////////////////////////////////////////////////
+    public void playEffectAngry(){
+        
+        // ワーク変数
+        int i = 0;
+        
+        for(i = 0;i < 4;i++){
+            
+            effectAngry[i].GetComponent<ParticleSystem>().Play();
+            
+        }
+        
+    }
+    
+    ////////////////////////////////////////////////////////
+    // エフェクトの再生
+    ////////////////////////////////////////////////////////
+    public void playEffectSweat(){
+        
+        effectSweat.GetComponent<ParticleSystem>().Play();
         
     }
     

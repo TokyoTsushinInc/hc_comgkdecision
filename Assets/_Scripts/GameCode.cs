@@ -145,12 +145,43 @@ public class GameCode : MonoBehaviour{
 		// フルボタン
 		mainCode.showFullButton(true);
 		
+		// ステータスの更新
+		mainCode.setStatus();
+		
 	}
 	
     ////////////////////////////////////////////////////////
 	// 更新処理
 	////////////////////////////////////////////////////////
     void LateUpdate(){
+		
+		if(mainCode.skip){
+			
+			mainCode.skip = false;
+			
+			// セットアニメ
+			mainCode.setAnimation(objectAnimFukidasi,"anim_fukidasi_reset");
+			mainCode.setAnimation(objectAnimSelectA,"anim_select_reset");
+			mainCode.setAnimation(objectAnimSelectB,"anim_select_reset");
+			
+			mainCode.full = false;
+								
+			// フルボタン
+			mainCode.showFullButton(false);
+			
+			// シーンを再読み込み
+			SceneManager.LoadScene("game");
+			
+		}
+		
+		if(mainCode.colors){
+			
+			mainCode.colors = false;
+			
+			// ステータスの更新
+			mainCode.setStatus();
+			
+		}
 		
 		switch(state){
 			
@@ -235,7 +266,11 @@ public class GameCode : MonoBehaviour{
 							// セットアニメ
 							mainCode.setAnimation(objectAnimSelectB,"anim_select_choice");
 							
-							select_ab_str = "b";
+							if(mainCode.current_index == 2){
+								select_ab_str = "c";
+							}else{
+								select_ab_str = "b";
+							}
 							
 							sub = 3;
 							timer = 2.0f;
@@ -273,7 +308,15 @@ public class GameCode : MonoBehaviour{
 						}
 						
 						// カメラの移動
-						setCameraPosition("CamPosCloseUp",20.0f,1.0f);
+						if(select_ab_str == "a"){
+							setCameraPosition("CamPosCloseUp",20.0f,1.0f);
+						}else{
+							if(mainCode.current_index == 2){
+								setCameraPosition("CamPosCloseUp",20.0f,1.0f);
+							}else{
+								setCameraPosition("CamPosCloseUp",20.0f,3.0f);
+							}
+						}
 						
 						// フルボタン
 						mainCode.showFullButton(true);
@@ -405,6 +448,31 @@ public class GameCode : MonoBehaviour{
 	public void actionQueTalkFace(int index,bool flag){
 		
 		objectChara[index].GetComponent<CharaCode>().setTalkFace(flag);
+		
+	}
+	
+	////////////////////////////////////////////////////////
+	// キューの実行
+	////////////////////////////////////////////////////////
+	public void actionQueMove(int index,string str){
+		
+		// セットアニメ
+		mainCode.setAnimation(objectChara[index].transform.parent.transform.gameObject,str);
+		
+	}
+	
+	////////////////////////////////////////////////////////
+	// キューの実行
+	////////////////////////////////////////////////////////
+	public void actionQueEffect(int index,string str){
+		
+		if(str == "sweat"){
+			objectChara[index].GetComponent<CharaCode>().playEffectSweat();
+		}
+		
+		if(str == "angry"){
+			objectChara[index].GetComponent<CharaCode>().playEffectAngry();
+		}
 		
 	}
 	
