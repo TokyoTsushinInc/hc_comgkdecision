@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class CharaCode : MonoBehaviour{
     
     // ゲームオブジェクト
     public GameObject[] objectSkin = new GameObject[8];
+    
+    // ゲームオブジェクト
+    public GameObject objectKissMark = null;
+    public GameObject objectPhoto = null;
     
     // スキンメッシュ
     public SkinnedMeshRenderer[] smr = new SkinnedMeshRenderer[8];
@@ -207,6 +212,36 @@ public class CharaCode : MonoBehaviour{
     public void playEffectSweat(){
         
         effectSweat.GetComponent<ParticleSystem>().Play();
+        
+    }
+    
+    ////////////////////////////////////////////////////////
+    // キスマークの表示設定
+    ////////////////////////////////////////////////////////
+    public void showKissMark(bool flag){
+        
+        try{
+            
+            objectKissMark.SetActive(flag);
+            
+        }catch(Exception e){
+            
+        }
+        
+    }
+    
+    ////////////////////////////////////////////////////////
+    // フォトの表示設定
+    ////////////////////////////////////////////////////////
+    public void showPhoto(bool flag){
+        
+        try{
+            
+            objectPhoto.SetActive(flag);
+            
+        }catch(Exception e){
+            
+        }
         
     }
     

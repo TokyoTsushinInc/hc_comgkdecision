@@ -27,6 +27,7 @@ public class GameCode : MonoBehaviour{
 	
 	// ゲームオブジェクト(コードでアタッチしてね)
 	public GameObject objectAnimFukidasi = null;
+	public GameObject objectAnimFukidasi2 = null;
 	public GameObject objectAnimSelectA = null;
 	public GameObject objectAnimSelectB = null;
 	
@@ -52,6 +53,7 @@ public class GameCode : MonoBehaviour{
 			mainCode = GameObject.Find("MainCode").GetComponent<MainCode>();
 			
 			objectAnimFukidasi = GameObject.Find("UI/anim_fukidasi").gameObject;
+			objectAnimFukidasi2 = GameObject.Find("UI/anim_fukidasi2").gameObject;
 			objectAnimSelectA = GameObject.Find("UI/anim_selectA").gameObject;
 			objectAnimSelectB = GameObject.Find("UI/anim_selectB").gameObject;
 			
@@ -107,7 +109,17 @@ public class GameCode : MonoBehaviour{
 		// それぞれのキャラのACを設定しておく
 		// シンプルなクロスフェード
 		mainCode.crossFade(objectChara[0].GetComponent<CharaCode>().getSkinObject(),"TALK");
-		mainCode.crossFade(objectChara[1].GetComponent<CharaCode>().getSkinObject(),"IDLE1");
+		if(mainCode.current_index == 2){
+			objectChara[0].GetComponent<CharaCode>().getSkinObject().GetComponent<AvatarIKCode>().setFixParamMode(1);// 1:off 0:on
+		}
+		
+		if(mainCode.current_index == 2){
+			mainCode.crossFade(objectChara[1].GetComponent<CharaCode>().getSkinObject(),"IDLE0");
+			objectChara[1].GetComponent<CharaCode>().getSkinObject().GetComponent<AvatarIKCode>().setFixParamMode(0);// 1:off 0:on
+		}else{
+			mainCode.crossFade(objectChara[1].GetComponent<CharaCode>().getSkinObject(),"IDLE1");
+			objectChara[1].GetComponent<CharaCode>().getSkinObject().GetComponent<AvatarIKCode>().setFixParamMode(1);// 1:off 0:on
+		}
 		
 		// 大統領のフェイスを設定しておく
 		objectChara[0].GetComponent<CharaCode>().setTalkFace(true);
@@ -136,8 +148,37 @@ public class GameCode : MonoBehaviour{
 		
 		// テキストをセット
 		objectAnimFukidasi.transform.FindChild("base/fukidasi/text").GetComponent<TextMesh>().text = question_str;
+		objectAnimFukidasi2.transform.FindChild("base/fukidasi/text").GetComponent<TextMesh>().text = question_str;
 		objectAnimSelectA.transform.FindChild("base/text").GetComponent<TextMesh>().text = a_str;
 		objectAnimSelectB.transform.FindChild("base/text").GetComponent<TextMesh>().text = b_str;
+		
+		// キスマークの設定
+		if(mainCode.current_index == 2){
+			objectChara[0].GetComponent<CharaCode>().showKissMark(true);
+		}else{
+			objectChara[0].GetComponent<CharaCode>().showKissMark(false);
+		}
+		
+		// フォトの設定
+		if(mainCode.current_index == 2){
+			objectChara[1].GetComponent<CharaCode>().showPhoto(true);
+		}else{
+			objectChara[1].GetComponent<CharaCode>().showPhoto(false);
+		}
+		
+		// カメラルックの設定
+		if(mainCode.current_index == 2){
+			objectCamera.GetComponent<LookAtSmoothCode>().lookTransform = GameObject.Find("Targets/CamLook2").transform;
+		}else{
+			objectCamera.GetComponent<LookAtSmoothCode>().lookTransform = GameObject.Find("Targets/CamLook").transform;
+		}
+		
+		// カメラの移動
+		if(mainCode.current_index == 2){
+			setCameraPosition("CamPosMidiumShot2",25.0f,0.0f);
+		}else{
+			setCameraPosition("CamPosMidiumShot",25.0f,0.0f);
+		}
 		
 		// セッティングボタン
 		mainCode.showSettingButton(true);
@@ -161,6 +202,7 @@ public class GameCode : MonoBehaviour{
 			
 			// セットアニメ
 			mainCode.setAnimation(objectAnimFukidasi,"anim_fukidasi_reset");
+			mainCode.setAnimation(objectAnimFukidasi2,"anim_fukidasi_reset2");
 			mainCode.setAnimation(objectAnimSelectA,"anim_select_reset");
 			mainCode.setAnimation(objectAnimSelectB,"anim_select_reset");
 			
@@ -205,7 +247,15 @@ public class GameCode : MonoBehaviour{
 					mainCode.showFullButton(false);
 					
 					// カメラの移動
-					setCameraPosition("CamPosLongShot",25.0f,0.0f);
+					if(mainCode.current_index == 2){
+						setCameraPosition("CamPosLongShot2",25.0f,0.0f);
+					}else{
+						setCameraPosition("CamPosLongShot",25.0f,0.0f);
+					}
+					
+					if(mainCode.current_index == 2){
+						objectChara[0].GetComponent<CharaCode>().getSkinObject().GetComponent<AvatarIKCode>().setFixParamMode(0);// 1:off 0:on
+					}
 					
 				}
 				
@@ -222,7 +272,11 @@ public class GameCode : MonoBehaviour{
 						timer = 2.0f;
 						
 						// セットアニメ
-						mainCode.setAnimation(objectAnimFukidasi,"anim_fukidasi_in");
+						if(mainCode.current_index == 2){
+							mainCode.setAnimation(objectAnimFukidasi2,"anim_fukidasi_in2");
+						}else{
+							mainCode.setAnimation(objectAnimFukidasi,"anim_fukidasi_in");
+						}
 						
 					}
 					
@@ -285,7 +339,11 @@ public class GameCode : MonoBehaviour{
 					if(timer <= 0.0){
 						
 						// セットアニメ
-						mainCode.setAnimation(objectAnimFukidasi,"anim_fukidasi_out");
+						if(mainCode.current_index == 2){
+							mainCode.setAnimation(objectAnimFukidasi2,"anim_fukidasi_out2");
+						}else{
+							mainCode.setAnimation(objectAnimFukidasi,"anim_fukidasi_out");
+						}
 						mainCode.setAnimation(objectAnimSelectA,"anim_select_out");
 						mainCode.setAnimation(objectAnimSelectB,"anim_select_out");
 						
@@ -299,6 +357,15 @@ public class GameCode : MonoBehaviour{
 					timer -= Time.deltaTime * 1.0f;
 					if(timer <= 0.0){
 						
+						// カメラルックの設定
+						if(mainCode.current_index == 2){
+							objectCamera.GetComponent<LookAtSmoothCode>().lookTransform = GameObject.Find("Targets/CamLook").transform;
+						}
+						
+						if(mainCode.current_index == 2){
+							objectChara[0].GetComponent<CharaCode>().getSkinObject().GetComponent<AvatarIKCode>().setFixParamMode(1);// 1:off 0:on
+							objectChara[1].GetComponent<CharaCode>().getSkinObject().GetComponent<AvatarIKCode>().setFixParamMode(1);// 1:off 0:on
+						}
 						// セットアニメ
 						if(use_chara_index == 0){
 							mainCode.setAnimation(objectAnimQue,"anim_que_jfk_" + select_ab_str);
@@ -312,7 +379,7 @@ public class GameCode : MonoBehaviour{
 							setCameraPosition("CamPosCloseUp",20.0f,1.0f);
 						}else{
 							if(mainCode.current_index == 2){
-								setCameraPosition("CamPosCloseUp",20.0f,1.0f);
+								setCameraPosition("CamPosCloseUp2",20.0f,1.0f);
 							}else{
 								setCameraPosition("CamPosCloseUp",20.0f,3.0f);
 							}
@@ -472,6 +539,24 @@ public class GameCode : MonoBehaviour{
 		
 		if(str == "angry"){
 			objectChara[index].GetComponent<CharaCode>().playEffectAngry();
+		}
+		
+	}
+	
+	////////////////////////////////////////////////////////
+	// キューの実行
+	////////////////////////////////////////////////////////
+	public void actionQue(string str){
+		
+		Transform tra = null;
+		
+		if(str == "1,LookFront"){
+			
+			tra = objectChara[1].transform.FindChild("lady_Head2").gameObject.transform;
+			
+			objectChara[1].GetComponent<CharaCode>().getSkinObject().GetComponent<AvatarIKCode>().setRightHandAnchor(null);
+			objectChara[1].GetComponent<CharaCode>().getSkinObject().GetComponent<AvatarIKCode>().setHeadAnchor(tra);
+			objectChara[1].GetComponent<CharaCode>().getSkinObject().GetComponent<AvatarIKCode>().setFixParamMode(0);// 1:off 0:on
 		}
 		
 	}

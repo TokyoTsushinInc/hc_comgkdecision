@@ -127,4 +127,14 @@ public class QueCode : MonoBehaviour{
 		
 	}
     
+	////////////////////////////////////////////////////////
+	// キュー
+	////////////////////////////////////////////////////////
+	public void que(string str){
+		
+		// その他に利用
+		gameCode.actionQue(str);
+		
+	}
+	
 }
